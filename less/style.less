@@ -1,0 +1,93 @@
+@import 'var';
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: @font-family;
+    box-sizing: border-box;
+    color: @paragraph;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: @background;
+}
+
+main{
+    padding-top: 3.6em;
+}
+
+@media(max-width: @breakpoint-md){
+main{
+    padding-top: 6.6em;
+} 
+}
+
+@media(max-width: @breakpoint-sm){
+    main{
+        padding-top: 6em;
+    } 
+    }
+
+a{
+    text-decoration: none;
+    color: @main;
+
+    &:hover{
+        color: lighten(@main, 20%);
+    }
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: @white;
+    font-family: @font-family-lora;
+}
+
+h1,h2,h3,h4,h5,h6{
+    span{
+        color: @main;
+    }
+}
+
+h1{font-size: 1.8rem;}
+h2{font-size: 1.35rem;}
+h3{font-size: 1.2rem;}
+
+.container{
+    max-width: @breakpoint-lg;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.sectionM{
+    background-color: @main;
+
+    h1,h2,h3,h4,h5,h6{
+        color: @accent;
+    }
+}
+
+::-webkit-scrollbar{
+    width: .7em;
+}
+
+::-webkit-scrollbar-track{
+    background-color: lighten(@background, 5%);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: @main;
+    border-radius: 100vw;
+    border: .15em solid lighten(@background, 5%);
+
+    &:hover{
+        background-color: lighten(@main, 10%);
+    }
+}
+
+@import 'header';
+
+@import 'footer';
