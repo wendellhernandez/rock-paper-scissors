@@ -1,74 +1,101 @@
 header{
     background-color: @accent;
-    position: fixed;
     width: 100%;
 
     .container{
-        padding: .5em 2em;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-}
-
-@media(max-width: @breakpoint-md){
-header{
-    .container{
-        flex-direction: column;
-        align-items: center;
         padding: 1em 2em;
-        gap: 1em;
+        text-align: center;
     }
-}   
+
+    h1{
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
 }
 
-.logo{    
-    a{
-        font-size: 1.3rem;
-        color: @white;
-        display: flex;
-        align-items: center;
-        font-family: @font-family-lora;
-
-        span{
-            color: @main;
-            font-family: @font-family-lora;
-        }
+main{
+    .container{
+        margin-block: 1em;
     }
+}
+
+.weaponBox{
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+    border: 4px solid @main;
+    border-radius: .5em;
+    padding: 1em;
 
     img{
-        height: 2em;
-        margin-right: .6em;
-    }
-}
+        width: 7em;
+        cursor: pointer;
+        border-radius: 100vw;
+        transition: .2s ease;
+        border: 4px solid @main;
 
-nav{
-    font-size: .9rem;
-    font-weight: bold;
-
-    a{
         &:hover{
-            border-bottom: 1px solid @main;
+            transform: scale(1.1);
+            background-color: @secondary;
         }
     }
 }
 
-@media (max-width: @breakpoint-sm){
-.logo{
-    a{
-        font-size: 1.2rem;
-    }
+.active{
+    background-color: @secondary;
+}
+
+.inbetween{
+    text-align: center;
+    color: @gray--light;
+    font-size: 1.3rem;
+}
+
+.storyBox{
+    display: flex;
+    border: 4px solid @main;
+    border-radius: .5em;
+}
+
+.enemyBox{
+    border-right: 4px solid @main;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    min-width: 170px;
 
     img{
-        height: 1.7em;
+        width: 7em;
+        border-radius: 100vw;
+        transition: .2s ease;
+        border: 4px solid @main;
+        background-color: @gray;
     }
-}
 }
 
-nav{
-    ul{
-        list-style: none;
-        display: flex;
-        gap: 1em;
-    }
+.lifeBox{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.story{
+    color: @gray--light;
+}
+
+.results{
+    text-align: center;
+    font-size: 6rem;
+    color: @red;
+    padding: 1em;
+}
+
+.resultsWin{
+    text-align: center;
+    font-size: 6rem;
+    color: @main;
+    padding: 1em;
 }

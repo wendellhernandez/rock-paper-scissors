@@ -3,41 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ResponsiveHero</title>
+    <title>Rock Paper Scissors RPG</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="assets/undraw_real_time_sync_re_nky7.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/rock.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">
-                <a href="#">
-                    <img src="assets/undraw_real_time_sync_re_nky7.svg" alt="">
-                    Responsive<span>Hero</span>
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home" data-id="#home">HOME</a></li>
-                    <li><a href="#aboutme" data-id="#aboutme">ABOUT ME</a></li>
-                    <li><a href="#recentposts" data-id="#recentposts">RECENT POSTS</a></li>
-                </ul>
-            </nav>
+            <h1>Choose your weapon</h1>
         </div>
     </header>
 
-    <main id="home">
-        
+    <main>
+        <div class="container">
+            <div class="weaponBox">
+                <img src="assets/rock.png" id="rock">
+                <img src="assets/paper.png" id="paper">
+                <img src="assets/scissors.png" id="scissors">
+            </div>
+        </div>
+
+        <div class="inbetween">
+            >> --------- > * _ + * + _ * < --------- <<
+        </div>
+
+        <div class="container">
+            <div class="storyBox">
+                <div class="enemyBox">
+                    <h3>Enemy's Weapon</h3>
+                    <img src="assets/troll.png">
+                </div>
+                <div class="lifeBox">
+                    <h3></h3>
+                    <div class="lives">
+                    </div>
+                    <div class="story">
+                        Prepare to fight!
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
         Project by: <a href="https://github.com/wendell010203">Wendell Hernandez</a>
         <br>
-        Tech Stack: <span>Responsive Web Design, HTML, CSS, Javascript, LESS</span>
+        Tech Stack: <span>HTML, CSS, Javascript, LESS</span>
         <br><br>
         Copyright &copy; 2023
     </footer>
